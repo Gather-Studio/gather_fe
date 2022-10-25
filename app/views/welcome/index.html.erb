@@ -1,7 +1,11 @@
 <%= render partial: "shared/header" %>
-<%# <script src="https://kit.fontawesome.com/41eea4378c.js" crossorigin="anonymous"></script> %>
-<div class="container">
-<div class="row">
+
+<div class="jumbotron jumbotron-fluid" style="background-color: #eed7c5;">
+  <div class="container">
+    <h1 class="display-4">Welcome to Gather Studio</h1>
+    <p class="lead">We are all about inspiring creativity and craftsmanship. Our doors are open to everyone with an interest in clay and ceramics.  We want to share our love for making, creating, experimenting and exploring all aspects of working with clay. We offer learning opportunities for those wishing to develop and improve skills; and use of studio space and equipment for independent makers. </p>
+  </div>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -10,7 +14,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <%= image_tag "image1.jpg", class: "d-block w-100" %>
+      <%= image_tag "image1.jpg", class: "d-block w-100" %>
     </div>
     <div class="carousel-item">
       <%= image_tag "image2.jpg", class: "d-block w-100" %>
@@ -29,43 +33,74 @@
   </a>
 </div>
 </div>
-</div>
+
   <div class="row top-buffer">
     <div class="col">
-    
-      <div class="card" style="width: 25rem;">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1474.6959656487122!2d-73.0124988210221!3d40.76601388337402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e849ffa8262e01%3A0xde50f977a87f7195!2sGather%20Studio!5e0!3m2!1sen!2sus!4v1666492365933!5m2!1sen!2sus"  style="border:0; height:15rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <div class="card-body" style="background-color: #eed7c5;">
-    <h5 class="card-title">Contact</h5>
-    <p class="card-text"><b> Address: </b> 83 East Main Street - Suit 5 <br>Patchogue, NY 11772</p> 
-    <p> <b>Phone:</b> (631) 654-1351 </p>
-    <center>
-    <a href="https://www.facebook.com/GatherStudio"><i class="fa fa-brands fa-facebook fa-2xl m-1"></i></a>
-    <a href = "mailto: gatherstudio@optimum.net"><i class="fa fa-solid fa-envelope fa-2xl m-1"></i></a>
-    <a href="https://www.instagram.com/gather_studio/"><i class="fa fa-brands fa-instagram fa-2xl m-1"></i></i></a>
-    </center>
-  </div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 25rem; background-color: #eed7c5;">
-  <div class="card-body">
-    <h5 class="card-title">Studio Hours</h5>
-    <p class="card-text">
-    <b> Monday: </b> Closed <br>
-    <b> Tuesday: </b> Closed <br>
-    <b> Wednesday: </b> 1 pm - 8 pm <br>
-    <b> Thursday: </b> 12 noon - 7 pm <br>
-    <b> Friday: </b> 12 noon - 7 pm <br>
-    <b> Saturday: </b> 11 am - 5 pm <br>
-    <b> Sunday: </b> Closed
-     <center>
-    <h6 class="card-subtitle mb-2">Feel free to pop in and check us out!</h6>
-    <i>Sunday - Tuesday the studio is available for pre-arranged use. Please see owners to arrange.</i></center>
-    </p>
-  </div>
-</div>
+      <div class="card" style="width: 25rem; height: 30rem;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1474.6959656487122!2d-73.0124988210221!3d40.76601388337402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e849ffa8262e01%3A0xde50f977a87f7195!2sGather%20Studio!5e0!3m2!1sen!2sus!4v1666492365933!5m2!1sen!2sus"  style="border:0; height:15rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="card-body" style="background-color: #eed7c5;">
+        <h5 class="card-title">Contact</h5>
+        <p class="card-text">
+        <table class="table table-borderless">
+          <tr>
+            <td><b>Address:</b></td> 
+            <td> 83 East Main Street - Suit 5 <br> Patchogue, NY 11772<td> 
+          </tr>
+          <tr>
+            <td> <b>Phone:</b></td>
+            <td>(631) 654-1351 </td>
+          </tr>
+        </table>
+        <center>
+        <a href="https://www.facebook.com/GatherStudio"><i class="fa fa-brands fa-facebook fa-2xl m-1"></i></a>
+        <a href = "mailto: gatherstudio@optimum.net"><i class="fa fa-solid fa-envelope fa-2xl m-1"></i></a>
+        <a href="https://www.instagram.com/gather_studio/"><i class="fa fa-brands fa-instagram fa-2xl m-1"></i></i></a>
+        </center>
+      </div>
     </div>
   </div>
+
+  <div class="col">
+      <div class="card" style="width: 25rem; height: 30rem; background-color: #eed7c5;">
+      <div class="card-body">
+      <h5 class="card-title">Studio Hours</h5>
+      <p class="card-text">
+        <table class="table table-borderless hours-table">
+        <tr>
+          <td><b>Monday:</b></td> 
+          <td>Closed</td>
+        </tr>
+        <tr>
+          <td><b>Tuesday:</b></td>
+          <td>Closed</td>
+        </tr>
+        <tr>
+          <td><b>Wednesday:</b></td>
+          <td>1 pm - 8 pm</td>
+        </tr>
+        <tr>
+          <td><b>Thursday:</b></td> 
+          <td>12 noon - 7 pm</td>
+        </tr>
+        <tr>
+          <td><b>Friday:</b></td> 
+          <td>12 noon - 7 pm</td>
+        </tr>
+        <tr>
+          <td><b>Saturday:</b></td> 
+          <td>11 am - 5 pm</td>
+        </tr>
+        <tr>
+          <td><b>Sunday:</b></td>
+          <td>Closed</td>
+        </tr>
+        </table>
+        <center>
+        <i>Sunday - Tuesday the studio is available for pre-arranged use. Please see owners to arrange.</i></center>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render partial: "shared/footer" %>
