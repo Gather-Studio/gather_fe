@@ -34,7 +34,8 @@ RSpec.describe 'Homepage' do
 
   context "a user is not logged in" do
     it 'has a button to log in or sign up' do
-      expect(page).to have_button "Sign Up / Login"
+      expect(page).to have_button "Register"
+      expect(page).to have_button "Sign In"
     end
   end
   
