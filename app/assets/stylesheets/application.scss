@@ -1,7 +1,16 @@
 @import "bootstrap";
 @import "font-awesome";
 
+@font-face {
+  font-family: 'Soria';
+  src: url('soria-font.ttf');
+}
 
+.navbar-brand {
+  font-family: 'Soria';
+  font-size: 30px;
+  padding: 0;
+}
 .fa {
   color: #b36a5e;
 }
@@ -24,6 +33,7 @@
 
 .card {
   margin: auto;
+  font-family: 'Roboto';
 }
 
 .footer {
