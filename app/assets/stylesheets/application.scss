@@ -1,6 +1,15 @@
 @import "bootstrap";
 @import "font-awesome";
 
+* {
+  font-family: "Delicious";
+ }
+
+ @font-face {
+  font-family: 'Playfair Display';
+  src: url('/path-to/font-file.file-extension')
+}
+
 
 .fa {
   color: #b36a5e;
