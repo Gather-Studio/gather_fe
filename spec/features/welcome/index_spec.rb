@@ -13,7 +13,6 @@ RSpec.describe 'Homepage' do
 
   it 'displays homepage message' do
     expect(page).to have_content "Welcome to Gather Studio"
-    save_and_open_page
   end
 
   it 'displays contact information' do
