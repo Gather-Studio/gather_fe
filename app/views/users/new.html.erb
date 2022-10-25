@@ -1,0 +1,42 @@
+<%= render partial: "shared/header" %>
+<div class="jumbotron jumbotron-fluid" style="background-color: #eed7c5;">
+  <div class="container">
+    <h1 class="display-4">Create a Free Gather Studio Account</h1>
+    <p class="lead">Members can track the progress of their pieces, register for classes and see what fellow makers are creating!</p>
+  </div>
+</div>
+<div class="container register-container">
+<form method="POST" action="/users">
+  <div class="form-row register-form">
+    <div class="form-group col-md-6">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+  </div>
+  <div class="form-group">
+      <label for="passwordConfirmation">Password Confirmation</label>
+      <input type="password" class="form-control" id="passwordConfirmation" placeholder="Password">
+  </div>
+  <center>
+    <button type="submit" class="btn btn-primary" style="margin-top:10px;">Create Account</button>
+  </center>
+</form>
+</div>
+
+
+
+
+<%= render partial: "shared/footer" %>
