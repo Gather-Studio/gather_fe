@@ -5,36 +5,48 @@
     <p class="lead">Members can track the progress of their pieces, register for classes and see what fellow makers are creating!</p>
   </div>
 </div>
+
+
 <div class="container register-container">
-<form method="POST" action="/users">
-  <div class="form-row register-form">
-    <div class="form-group col-md-6">
-      <label for="firstName">First Name</label>
-      <input type="text" class="form-control" id="firstName" placeholder="First Name">
+  <%= form_with url: users_path, local:true do |f|%>
+
+    <div class="form-row register-form">
+    
+      <div class="form-group col-md-6">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, placeholder: "First Name", class: "form-control" %>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="lastName">Last Name</label>
-      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+
+    <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, placeholder: "Email", autofocus: true, class: "form-control" %>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
+
+    <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password_field, placeholder: "Password", autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_field, placeholder: "Password Confirmation", autofocus: true, class: "form-control" %>
+    </div>
+
+      <div class="actions">
+      <center>
+        <%= f.submit "Create Account", class: "btn btn-primary" %>
+      </center>
+    </div>
+
   </div>
-  <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Password">
-  </div>
-  <div class="form-group">
-      <label for="passwordConfirmation">Password Confirmation</label>
-      <input type="password" class="form-control" id="passwordConfirmation" placeholder="Password">
-  </div>
-  <center>
-    <button type="submit" class="btn btn-primary" style="margin-top:10px;">Create Account</button>
-  </center>
-</form>
-</div>
+<% end %>
 
 
 
