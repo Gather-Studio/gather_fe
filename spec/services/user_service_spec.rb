@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe UserService do
   context '#create_user' do
-    it 'creates a new user and returns the users information' do
+    xit 'creates a new user and returns the users information' do
       user_data = {"first_name"=>"Jenn",
                     "last_name"=>"Halloran", 
                     "email"=>"halloran@udel.edu", 
