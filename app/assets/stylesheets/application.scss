@@ -1,7 +1,16 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
+@font-face {
+  font-family: 'Soria';
+  src: url('soria-font.ttf');
+}
+// Homepage
+.navbar-brand {
+  font-family: 'Soria';
+  font-size: 30px;
+  padding: 0;
+}
 .fa {
   color: #b36a5e;
 }
@@ -24,6 +33,7 @@
 
 .card {
   margin: auto;
+  font-family: 'Roboto';
 }
 
 .footer {
@@ -36,4 +46,17 @@ tr {
 
 .hours-table td, .hours-table th { 
   padding: 7px; 
+}
+
+
+// Registration Page
+.register-container {
+  background-color: #eed7c5;
+  max-width: 700px;
+  margin-top: 30px;
+  padding: 50px;
+  // padding-bottom: 40px;
+  // padding-left: 40px;
+  // padding-right: 40px;
+  border-radius: 10px;
 }
