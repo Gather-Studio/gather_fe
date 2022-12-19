@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe UserFacade do 
   describe '#create_user' do
-    xit 'creates a user object' do
+    it 'creates a user object' do
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
                   "email"=>"halloran@udel.edu", 
@@ -12,6 +12,8 @@ RSpec.describe UserFacade do
         user = UserFacade.create_user(user_data)
 
         expect(user).to be_a(User)
+
+        UserService.delete_user(user.id)
     end
   end
 end
