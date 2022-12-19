@@ -5,7 +5,7 @@ RSpec.describe UserFacade do
     it 'creates a user object' do
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
-                  "email"=>"halloran@udel.edu", 
+                  "email"=>"halloran77@udel.edu", 
                   "password"=>"iheartcats", 
                   "password_confirmation"=>"iheartcats"}
 
