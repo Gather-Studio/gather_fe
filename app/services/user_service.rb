@@ -1,6 +1,6 @@
 class UserService 
   def self.connection 
-    Faraday.new(url: 'https://gatherstudiobe.herokuapp.com')
+    Faraday.new(url: 'https://gatherbe.fly.dev')
   end
 
   def self.get_json(response)
