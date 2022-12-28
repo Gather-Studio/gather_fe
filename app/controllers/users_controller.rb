@@ -3,8 +3,12 @@ class UsersController < ApplicationController
 
   def create
     user = UserFacade.create_user(user_params)
-    ##create an error poros in facade? if instance of user, set session and redirect to dashboard_path 
-    ##if instance of error, return error and redirect back to form with error message. 
+    if user.is_a?(Error)
+      flash[:alert] = user.message
+      redirect_to '/register'
+    elsif user.is_a?(User)
+      redirect_to '/dashboard'
+    end
   end
 
   def show
