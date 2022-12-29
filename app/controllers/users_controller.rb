@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize_user, only: %i[show]
+  
   def new;end
 
   def create
