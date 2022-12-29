@@ -7,5 +7,10 @@ class UserFacade
       User.new(json)
     end
   end 
+
+  def self.get_user(data)
+    json = UserService.get_user(data)[:data]
+    User.new(json)
+  end
   
 end

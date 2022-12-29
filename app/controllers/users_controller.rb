@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = UserFacade.get_user(session[:id])
+    @user = UserFacade.get_user(session[:id])
     # @items = ItemFacade.get_user_items(user[:id])
   end
 
