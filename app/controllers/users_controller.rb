@@ -7,6 +7,7 @@ class UsersController < ApplicationController
       flash[:alert] = user.message
       redirect_to '/register'
     elsif user.is_a?(User)
+      session[:id] = user.id
       redirect_to '/dashboard'
     end
   end
