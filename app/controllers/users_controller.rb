@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize_user, only: %i[show]
+  
   def new;end
 
   def create
@@ -7,12 +9,13 @@ class UsersController < ApplicationController
       flash[:alert] = user.message
       redirect_to '/register'
     elsif user.is_a?(User)
+      session[:id] = user.id
       redirect_to '/dashboard'
     end
   end
 
   def show
-    # @user = UserFacade.get_user(session[:id])
+    @user = current_user 
     # @items = ItemFacade.get_user_items(user[:id])
   end
 

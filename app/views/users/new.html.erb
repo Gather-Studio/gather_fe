@@ -1,13 +1,11 @@
 <%= render partial: "shared/header" %>
-<div class="jumbotron jumbotron-fluid" style="background-color: #eed7c5;">
-  <div class="container">
-    <h1 class="display-4">Create a Free Gather Studio Account</h1>
-    <p class="lead">Members can track the progress of their pieces, register for classes and see what fellow makers are creating!</p>
-  </div>
-</div>
+
 
 
 <div class="container register-container">
+    <h1 class="display-4">Create a Free Account</h1>
+    <p class="lead">Gather Studio members can track the progress of their pieces, register for classes and see what fellow makers are creating!</p>
+    <hr>
   <% flash.each do |type, msg| %>
     <div id="message" class="alert alert-danger">
       <%= "Oops -" %>

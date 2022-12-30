@@ -10,7 +10,13 @@
   </head>
 
   <body>
-
+    <% flash.each do |type, msg| %>
+      <% if type == "unauthorized" %>
+        <div id="message" class="alert alert-danger">
+         <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
