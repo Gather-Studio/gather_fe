@@ -10,14 +10,16 @@
   </div>
   <form class="form-inline">
   <% if !session[:id] %>
-  <a href="/register">
-    <button type="button" class="btn btn-outline-light m-2">Register</button>
+    <a href="/register">
+      <button type="button" class="btn btn-outline-light m-2">Register</button>
     </a>
-    <button type="button" class="btn btn-outline-light m-2">Sign In</button>
+    <a href="/login">
+      <button type="button" class="btn btn-outline-light m-2">Sign In</button>
+    </a>
    <% end %>
    <% if session[:id] %>
       <a href="/logout">
-      <button type="button" class="btn btn-outline-light m-2">Log Out</button>
+        <button type="button" class="btn btn-outline-light m-2">Log Out</button>
       </a>
     <% end %>
   </form>
