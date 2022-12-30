@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
     def authorize_user
       unless session[:id]
-        flash[:alert] = 'Oopsy daisy! Please log in below to view that page.'
+        flash[:unauthorized] = 'Oopsy daisy! Please log in below to view that page.'
         redirect_to '/'
       end
   end
