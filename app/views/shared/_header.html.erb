@@ -1,8 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #b36a5e;">
-  <a class="navbar-brand m-2" href="#">Gather Studio</a>
+  <a class="navbar-brand m-2" href="/">Gather Studio</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <% if !session[:id] %>
+        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <% elsif session[:id]%>
+        <a class="nav-item nav-link active" href="/dashboard">Home <span class="sr-only">(current)</span></a>
+      <% end %>
       <%# <a class="nav-item nav-link" href="#">Home</a> %>
       <a class="nav-item nav-link" href="#">Classes</a>
       <a class="nav-item nav-link" href="#">Open Studio</a>
