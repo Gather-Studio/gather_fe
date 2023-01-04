@@ -5,7 +5,7 @@ RSpec.describe UserFacade do
     it 'creates a user object' do
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
-                  "email"=>"halloran77@udel.edu", 
+                  "email"=>"test3@gmail.com", 
                   "password"=>"iheartcats", 
                   "password_confirmation"=>"iheartcats"}
 
@@ -18,7 +18,7 @@ RSpec.describe UserFacade do
     it 'creates an error if data is invalid' do
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
-                  "email"=>"halloran77@udel.edu", 
+                  "email"=>"test4@gmail.com", 
                   "password"=>"iheartcats", 
                   "password_confirmation"=>"ihatecats"}
 
@@ -32,7 +32,7 @@ RSpec.describe UserFacade do
     it 'creates a user object' do
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
-                  "email"=>"halloran77@udel.edu", 
+                  "email"=>"test5@gmail.com", 
                   "password"=>"iheartcats", 
                   "password_confirmation"=>"iheartcats"}
 

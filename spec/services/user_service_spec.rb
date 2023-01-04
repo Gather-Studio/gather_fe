@@ -6,7 +6,7 @@ RSpec.describe UserService do
     it 'creates a new user and returns the users information' do
       user_data = {"first_name"=>"Jenn",
                     "last_name"=>"Halloran", 
-                    "email"=>"halloran2@udel.edu", 
+                    "email"=>"test11@gmail.com", 
                     "password"=>"iheartcats", 
                     "password_confirmation"=>"iheartcats"}
       response = UserService.create_user(user_data)
@@ -28,7 +28,7 @@ RSpec.describe UserService do
     it 'returns a users info from their id' do 
       user_data = {"first_name"=>"Jenn",
         "last_name"=>"Halloran", 
-        "email"=>"halloran19@udel.edu", 
+        "email"=>"test12@gmail.com", 
         "password"=>"iheartcats", 
         "password_confirmation"=>"iheartcats"}
         user = UserService.create_user(user_data)

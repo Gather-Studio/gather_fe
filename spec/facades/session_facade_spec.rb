@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe SessionFacade do 
   describe '#create_session' do
     it 'authenticates and returns user object' do
-      user_data = {"first_name"=>"Jenn",
-                  "last_name"=>"Halloran", 
-                  "email"=>"halloran77@udel.edu", 
+      user_data = {"first_name"=>"Test",
+                  "last_name"=>"User", 
+                  "email"=>"test1@gmail.com", 
                   "password"=>"iheartcats", 
                   "password_confirmation"=>"iheartcats"}
 
         user = UserFacade.create_user(user_data)
 
-        login_data = {"email"=>"halloran77@udel.edu", 
+        login_data = {"email"=>"test1@gmail.com", 
                       "password"=>"iheartcats"}
                       
         session = SessionFacade.create_session(login_data)
@@ -24,13 +24,13 @@ RSpec.describe SessionFacade do
     it 'returns an error if the login information is not correct' do
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
-                  "email"=>"halloran77@udel.edu", 
+                  "email"=>"test2@gmail.com", 
                   "password"=>"iheartcats", 
                   "password_confirmation"=>"iheartcats"}
 
         user = UserFacade.create_user(user_data)
 
-        login_data = {"email"=>"halloran77@udel.edu", 
+        login_data = {"email"=>"test2@gmail.com", 
                       "password"=>"ihatecats"}
                       
         session = SessionFacade.create_session(login_data)

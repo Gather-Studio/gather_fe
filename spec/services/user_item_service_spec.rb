@@ -5,7 +5,7 @@ RSpec.describe UserItemService do
     it 'creates an item for the given user' do
       user_data = {"first_name"=>"Jenn",
               "last_name"=>"Halloran", 
-              "email"=>"halloran2@udel.edu", 
+              "email"=>"test9@gmail.com", 
               "password"=>"iheartcats", 
               "password_confirmation"=>"iheartcats"}
       user = UserService.create_user(user_data)
@@ -27,7 +27,7 @@ RSpec.describe UserItemService do
     it 'gets all the items associated with a given user ID' do 
       user_data = {"first_name"=>"Jenn",
               "last_name"=>"Halloran", 
-              "email"=>"halloran2@udel.edu", 
+              "email"=>"test10@gmail.com", 
               "password"=>"iheartcats", 
               "password_confirmation"=>"iheartcats"}
       user = UserService.create_user(user_data)

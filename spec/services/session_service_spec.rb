@@ -6,12 +6,12 @@ RSpec.describe SessionService do
     it 'authenticates a user and creates a session if information is valid' do
       user_data = {"first_name"=>"Jenn",
                     "last_name"=>"Halloran", 
-                    "email"=>"halloran2@udel.edu", 
+                    "email"=>"test7@gmail.com", 
                     "password"=>"iheartcats", 
                     "password_confirmation"=>"iheartcats"}
       UserService.create_user(user_data)
 
-      login_data = {"email"=>"halloran2@udel.edu",
+      login_data = {"email"=>"test7@gmail.com",
                     "password"=> "iheartcats"}
       
       response = SessionService.create_session(login_data)
@@ -31,7 +31,7 @@ RSpec.describe SessionService do
     it 'returns a generic error if information is invalid' do
       user_data = {"first_name"=>"Jenn",
                     "last_name"=>"Halloran", 
-                    "email"=>"halloran2@udel.edu", 
+                    "email"=>"test8@gmail.com", 
                     "password"=>"iheartcats", 
                     "password_confirmation"=>"iheartcats"}
       user_data = UserService.create_user(user_data)
