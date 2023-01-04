@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user 
+    @user = current_user
+    require 'pry'; binding.pry
     # @items = ItemFacade.get_user_items(user[:id])
   end
 
