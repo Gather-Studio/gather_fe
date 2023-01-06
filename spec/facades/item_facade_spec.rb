@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe UserItemFacade do 
-  describe '#get_user_items(id)' do 
+RSpec.describe ItemFacade do 
+  describe '#get_items(id)' do 
     it 'returns item objects that are associated with the given user' do 
       user_data = {"first_name"=>"Jenn",
                   "last_name"=>"Halloran", 
@@ -20,7 +20,7 @@ RSpec.describe UserItemFacade do
                 "memo"=>"It's a little wonky", 
                 "style"=>"Wheel-Thrown",
                 "user_id"=> user.id}
-      UserItemService.create_item(item1, user.id)
+      ItemService.create_item(item1, user.id)
 
       item2 = {"name"=>"Bowl", 
                 "status"=> 1, 
@@ -31,9 +31,9 @@ RSpec.describe UserItemFacade do
                 "memo"=>"Cat Food Bowl", 
                 "style"=>"Wheel-Thrown",
                 "user_id"=> user.id}
-      UserItemService.create_item(item2, user.id)
+      ItemService.create_item(item2, user.id)
 
-        items = UserItemFacade.get_user_items(user.id)
+        items = ItemFacade.get_user_items(user.id)
         expect(items).to be_all(Item)
         expect(items.count).to eq(2)
 

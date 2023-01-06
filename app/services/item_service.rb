@@ -1,4 +1,4 @@
-class UserItemService
+class ItemService
   def self.connection 
     # Faraday.new(url: 'https://gatherbe.fly.dev')
     Faraday.new(url: 'http://localhost:3001')
