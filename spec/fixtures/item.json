@@ -1,0 +1,15 @@
+
+    {
+      "id": "2",
+      "type": "item",
+      "attributes": {
+        "name": "Spoon",
+        "style": "Hand Built",
+        "status": "Built",
+        "clay_body": "Red Clay",
+        "glazes": "Blue Rutile x2",
+        "height": 10.0,
+        "width": 4.5,
+        "memo": "Gift for Nan"
+      }
+    }
