@@ -3,8 +3,8 @@ class ItemFacade
 
   # end
 
-  def self.get_user_items(id)
-    json = ItemService.get_user_items(id)
+  def self.get_user_items(id, status="none")
+    json = ItemService.get_user_items(id, status)
     json[:data].map do |item_data|
       Item.new(item_data)
     end

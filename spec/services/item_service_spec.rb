@@ -54,8 +54,8 @@ RSpec.describe ItemService do
                 "user_id"=> user[:data][:id]}
       ItemService.create_item(item2, user[:data][:id])
       
-      response = ItemService.get_user_items(user[:data][:id])
-
+      response = ItemService.get_user_items(user[:data][:id], "none")
+      
       expect(response).to be_a Hash
       expect(response[:data]).to be_an Array
       expect(response[:data].length).to eq 2
