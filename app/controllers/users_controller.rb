@@ -17,6 +17,11 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @items = ItemFacade.get_user_items(@user.id)
+    @built_items = ItemFacade.get_user_items(@user.id, 0)
+    @trimmed_items = ItemFacade.get_user_items(@user.id, 1)
+    @bisque_items = ItemFacade.get_user_items(@user.id, 2)
+    @glazed_items = ItemFacade.get_user_items(@user.id, 3)
+    @finished_items = ItemFacade.get_user_items(@user.id, 4)
   end
 
 private

@@ -12,35 +12,63 @@
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Built</div>
-      Content for list item
+<% @built_items.each do |item| %>
+      <ul>
+        <li> <%= item.name %> </li>
+      </ul>
+<% end %>
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge bg-custom rounded-pill"><%=@built_items.count%></span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Trimmed</div>
-      Content for list item
+    <% @trimmed_items.each do |item| %>
+      <ul>
+        <li> <%= item.name %> </li>
+      </ul>
+    <% end %>
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge bg-custom rounded-pill"><%=@trimmed_items.count%></span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
-      <div class="fw-bold">Bisque</div>
-      Content for list item
+      <div class="fw-bold">Bisque </div>
+      <% @bisque_items.each do |item| %>
+      <ul>
+        <li> <%= item.name %> </li>
+      </ul>
+<% end %>
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge bg-custom rounded-pill"><%=@bisque_items.count%></span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Glazed</div>
-      Content for list item
+      <% @glazed_items.each do |item| %>
+      <ul>
+        <li> <%= item.name %> </li>
+      </ul>
+    <% end %>
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge bg-custom rounded-pill"><%=@glazed_items.count%></span>
   </li>
 </ol>
     </div>
     <div class="col">
-      Finished Pieces
+      <h3> Finished Pieces </h3>
+      <ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Finished</div>
+  <% @finished_items.each do |item| %>
+      <ul>
+        <li> <%= item.name %> </li>
+      </ul>
+<% end %>
+    </div>
+    <span class="badge bg-custom rounded-pill"><%=@finished_items.count%></span>
+  </li>
     </div>
   </div>
 </div>

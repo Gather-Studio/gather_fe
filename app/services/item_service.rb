@@ -6,7 +6,7 @@ class ItemService
     BaseService.get_json(response)
   end
 
-  def self.get_user_items(id, status= "none")
+  def self.get_user_items(id, status)
     if status != "none"
       response = BaseService.connection.get("api/v1/users/#{id}/items?status=#{status}")
     else 
